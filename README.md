@@ -6,7 +6,7 @@ A command-line student management system built in C++.
 - Student record management
 - User login and authentication
 - Profile viewing and editing
-- Dashboard with academic summary
+- Dashboard with an academic summary
 
 ## Prerequisites
 - g++ (GCC) 9.0 or later
