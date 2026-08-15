@@ -24,3 +24,7 @@ g++ main.cpp -o student-portal
 ## Project Structure
 - `main.cpp` — program entry point
 - `.gitignore` — excluded build artifacts
+
+
+## Author
+Srinjoy Majumdar (2026201054) — IIIT Hyderabad, SSD Monsoon 2026
