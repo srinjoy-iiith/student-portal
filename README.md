@@ -19,3 +19,8 @@ cd student-portal
 g++ main.cpp -o student-portal
 ./student-portal
 ```
+
+
+## Project Structure
+- `main.cpp` — program entry point
+- `.gitignore` — excluded build artifacts
