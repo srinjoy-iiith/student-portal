@@ -1,29 +1,14 @@
 #include <iostream>
-#include <string>
-
-void printWelcomeMessage() {
-    std::cout << "      Welcome to Git !       " << std::endl;
-}
-
-
-void greetUser() {
-    std::cout << "Hello, Developer!" << std::endl;
-}
-
-int addNumbers(int a, int b) {
-    return a + b;
-}
+#include "student.h"
 
 int main() {
-    printWelcomeMessage();
-    greetUser();
+    std::cout << "=== Student Portal ===" << std::endl;
 
-    int num1 = 5;
-    int num2 = 10;
-    int result = addNumbers(num1, num2);
+    Student s1(2026201054, "Srinjoy Majumdar", 8.7f);
+    Student s2(2026201099, "Test User", 7.4f);
 
-    std::cout << "The sum of " << num1 << " and " << num2 << " is: " << result << std::endl;
-    std::cout << "Program finished successfully." << std::endl;
+    s1.display();
+    s2.display();
 
     return 0;
 }
