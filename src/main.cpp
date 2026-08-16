@@ -3,6 +3,7 @@
 #include <string>
 #include "student_record.h"
 #include "auth.h"
+#include "profile.h"
 
 int main() {
     std::cout << "=== Student Portal ===" << std::endl;
@@ -18,6 +19,10 @@ int main() {
     if (auth.login("srinjoy", "gitlab123")) {
         activeModules.push_back("login (session active)");
     }
+    Profile profile("Srinjoy Majumdar");
+    profile.setBio("M.Tech CSE, IIIT-H");
+    profile.setEmail("srinjoy.majumdar.iiit@gmail.com");
+    activeModules.push_back(profile.render());
     // ---- MODULE REGISTRATION END ----
 
     std::cout << "\nActive modules (" << activeModules.size() << "):" << std::endl;
