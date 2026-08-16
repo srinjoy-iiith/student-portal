@@ -14,7 +14,13 @@ int main() {
     s1.display();
 
     std::vector<std::string> activeModules;
-
+    // Demonstrate logout: end the session after registration
+    Auth sessionDemo;
+    sessionDemo.registerUser("temp", "pass123");
+    sessionDemo.login("temp", "pass123");
+    sessionDemo.logout("temp");
+    activeModules.push_back(std::string("session demo: logged in then out = ")
+        + (sessionDemo.isLoggedIn("temp") ? "still in" : "logged out"));
     // ---- MODULE REGISTRATION START ----
     Auth auth;
     auth.registerUser("srinjoy", "gitlab123");
