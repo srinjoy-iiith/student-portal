@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include "student_record.h"
-// [MODULE INCLUDES]
+#include "auth.h"
 
 int main() {
     std::cout << "=== Student Portal ===" << std::endl;
@@ -13,6 +13,11 @@ int main() {
     std::vector<std::string> activeModules;
 
     // ---- MODULE REGISTRATION START ----
+    Auth auth;
+    auth.registerUser("srinjoy", "gitlab123");
+    if (auth.login("srinjoy", "gitlab123")) {
+        activeModules.push_back("login (session active)");
+    }
     // ---- MODULE REGISTRATION END ----
 
     std::cout << "\nActive modules (" << activeModules.size() << "):" << std::endl;
