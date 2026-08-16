@@ -5,6 +5,7 @@
 #include "auth.h"
 #include "profile.h"
 #include "dashboard.h"
+#include "settings.h"
 
 int main() {
     std::cout << "=== Student Portal ===" << std::endl;
@@ -28,6 +29,10 @@ int main() {
     dash.addCourse("SSD", 9.0f);
     dash.addCourse("Algorithms", 8.5f);
     activeModules.push_back("dashboard: top course = " + dash.topCourse());
+    Settings settings;
+    settings.setTheme("dark");
+    settings.toggleNotifications();
+    activeModules.push_back("settings: " + settings.summary());
     // ---- MODULE REGISTRATION END ----
 
     std::cout << "\nActive modules (" << activeModules.size() << "):" << std::endl;
