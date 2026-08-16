@@ -1,2 +1,2 @@
 Portal changelog:
-- v1: four modules integrated with session demo
+- v1.0: stable release with login, profile, dashboard, settings modules
