@@ -1,4 +1,4 @@
-#include "student.h"
+#include "student_record.h"
 #include <iostream>
 
 Student::Student(int id, const std::string& name, float gpa)

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "student.h"
+#include "student_record.h"
 
 int main() {
     std::cout << "=== Student Portal ===" << std::endl;
