@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include "student_record.h"
-// [MODULE INCLUDES]
+#include "settings.h"
 
 int main() {
     std::cout << "=== Student Portal ===" << std::endl;
@@ -13,6 +13,10 @@ int main() {
     std::vector<std::string> activeModules;
 
     // ---- MODULE REGISTRATION START ----
+    Settings settings;
+    settings.setTheme("dark");
+    settings.toggleNotifications();
+    activeModules.push_back("settings: " + settings.summary());
     // ---- MODULE REGISTRATION END ----
 
     std::cout << "\nActive modules (" << activeModules.size() << "):" << std::endl;
