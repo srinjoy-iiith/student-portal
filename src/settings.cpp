@@ -10,6 +10,11 @@ void Settings::toggleNotifications() {
     notifications = !notifications;
 }
 
+void Settings::resetDefaults() {
+    theme = "light";
+    notifications = true;
+}
+
 std::string Settings::summary() const {
     return "Theme: " + theme + " | Notifications: " + (notifications ? "on" : "off");
 }
