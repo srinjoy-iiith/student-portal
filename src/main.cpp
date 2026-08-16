@@ -1,14 +1,23 @@
 #include <iostream>
+#include <vector>
+#include <string>
 #include "student_record.h"
+// [MODULE INCLUDES]
 
 int main() {
     std::cout << "=== Student Portal ===" << std::endl;
 
     Student s1(2026201054, "Srinjoy Majumdar", 8.7f);
-    Student s2(2026201099, "Test User", 7.4f);
-
     s1.display();
-    s2.display();
 
+    std::vector<std::string> activeModules;
+
+    // ---- MODULE REGISTRATION START ----
+    // ---- MODULE REGISTRATION END ----
+
+    std::cout << "\nActive modules (" << activeModules.size() << "):" << std::endl;
+    for (const auto& m : activeModules) {
+        std::cout << "  * " << m << std::endl;
+    }
     return 0;
 }
