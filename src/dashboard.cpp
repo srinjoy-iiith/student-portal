@@ -14,3 +14,16 @@ float Dashboard::gpa() const {
 int Dashboard::courseCount() const {
     return courses.size();
 }
+
+std::string Dashboard::topCourse() const {
+    if (courses.empty()) return "none";
+    std::string best = courses[0].first;
+    float bestGrade = courses[0].second;
+    for (const auto& c : courses) {
+        if (c.second > bestGrade) {
+            bestGrade = c.second;
+            best = c.first;
+        }
+    }
+    return best;
+}

@@ -1,5 +1,6 @@
 #ifndef DASHBOARD_H
 #define DASHBOARD_H
+
 #include <string>
 #include <vector>
 #include <utility>
@@ -9,7 +10,10 @@ public:
     void addCourse(const std::string& course, float grade);
     float gpa() const;
     int courseCount() const;
+    std::string topCourse() const;
+
 private:
     std::vector<std::pair<std::string, float>> courses;
 };
+
 #endif
