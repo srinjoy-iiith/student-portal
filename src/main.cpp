@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include "student_record.h"
-// [MODULE INCLUDES]
+#include "dashboard.h"
 
 int main() {
     std::cout << "=== Student Portal ===" << std::endl;
@@ -13,6 +13,10 @@ int main() {
     std::vector<std::string> activeModules;
 
     // ---- MODULE REGISTRATION START ----
+    Dashboard dash;
+    dash.addCourse("SSD", 9.0f);
+    dash.addCourse("Algorithms", 8.5f);
+    activeModules.push_back("dashboard: top course = " + dash.topCourse());
     // ---- MODULE REGISTRATION END ----
 
     std::cout << "\nActive modules (" << activeModules.size() << "):" << std::endl;
