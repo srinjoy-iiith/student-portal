@@ -45,5 +45,6 @@ int main() {
     for (const auto& m : activeModules) {
         std::cout << "  * " << m << std::endl;
     }
+    std::cout << "\nThank you for using Student Portal." << std::endl;
     return 0;
 }
